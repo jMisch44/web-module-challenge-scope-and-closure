@@ -72,7 +72,7 @@ function inning(){
     return Math.ceil(Math.random() * 2);
 }
 
- console.log(inning());
+ console.log('task 2', inning());
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
@@ -102,7 +102,7 @@ function finalScore(inningcb, numberPlayed){
   };
 }
 
-console.log(finalScore(inning, 9));
+console.log('task 3', finalScore(inning, 9));
 
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
@@ -117,7 +117,7 @@ function getInningScore(inningcb) {
   };
 }
 
-console.log(getInningScore(inning));
+console.log('task 4', getInningScore(inning));
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
@@ -160,11 +160,23 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(inningScorecb, inningcb, numberOfInnings) {
+  let allGameInnings = [];
+  let homeScore = 0;
+  let awayScore = 0;
+  for(let i = 1; i <= numberOfInnings; i++){
+    const currentScore = inningScorecb(inningcb);
+
+    homeScore = homeScore += currentScore.Home;
+    awayScore = awayScore += currentScore.Away;
+    allGameInnings.push(`Inning ${[i]}: Away ${awayScore} - Home ${homeScore}`);
+  } 
+
+
+  return allGameInnings;
 }
 
-
+console.log('task 5', scoreboard(getInningScore, inning, 9));
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
