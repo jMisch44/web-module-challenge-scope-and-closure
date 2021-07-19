@@ -59,6 +59,9 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+
+    closure is when a nested function must receive information from outside its local scope.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -80,8 +83,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+    closure is used inside the anonymous function to get the name. You can tell because there is no variable called name inside the function.  
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+    the words are always the same including the name variable. Only the number that the dice rolled can change.    
+
 c. What is the lexical scope of `newRoll`? 
+
+    it belongs to the function inside of the personalDice function.
 
 
 ### Task 3 - Stretch Goals
