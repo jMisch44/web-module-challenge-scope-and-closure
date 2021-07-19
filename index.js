@@ -29,16 +29,16 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   1. What is the difference between counter1 and counter2?
 
-      counter1 has the count variable as a local variable to the counterMaker function
+        counter1 has the count variable as a local variable to the counterMaker function
   
   2. Which of the two uses a closure? How can you tell?
 
-    counter1 has a closure. You can tell because the counter function must look to it's parent function to get the count variable.
+        counter1 has a closure. You can tell because the counter function must look to it's parent function to get the count variable.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
 
-     
+        counter 1 is always preferable unless you need to access the count variable globally.   
 */
 
 // counter1 code
